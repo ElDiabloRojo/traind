@@ -10,6 +10,11 @@ RUN mkdir -p /tmp/mongodb && \
     sudo cp bin/* /usr/local/bin/ && \
     rm -rf /tmp/mongodb && \
     sudo mkdir -p /data/db && \
-    sudo chown gitpod:gitpod -R /data/db \
-    wget https://downloads.mongodb.com/compass/mongodb-compass_1.27.1_amd64.deb \
-    sudo dpkg -i mongodb-compass_1.26.1_amd64.deb
+    sudo chown gitpod:gitpod -R /data/db
+
+# Install mongodb compass on ubuntu
+# Source: https://docs.mongodb.com/compass/current/install/
+RUN sudo apt-get update && \
+    sudo DEBIAN_FRONTEND=noninteractive apt-get -y install libnotify4 libnss3 xdg-utils libgconf-2-4 libsecret-1-0 gnome-keyring&& \
+    wget https://downloads.mongodb.com/compass/mongodb-compass_1.26.0_amd64.deb && \
+    sudo dpkg -i mongodb-compass_1.26.0_amd64.deb
