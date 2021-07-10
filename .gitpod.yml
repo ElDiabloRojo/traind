@@ -24,3 +24,5 @@ tasks:
   - name: Mongo Start
     command: mkdir -p /workspace/data && mongod --dbpath /workspace/data
     openMode: split-right
+  - name: Compass Start
+    command: mongodb-compass
