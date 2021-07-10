@@ -1,5 +1,9 @@
 FROM gitpod/workspace-full-vnc
 
+RUN sudo apt-get update && \
+    sudo apt-get install -y libasound2-dev libgtk-3-dev libnss3-dev && \
+    sudo rm -rf /var/lib/apt/lists/*
+
 # Install MongoDB
 # Source: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu-tarball/#install-mongodb-community-edition
 RUN mkdir -p /tmp/mongodb && \
