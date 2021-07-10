@@ -16,6 +16,8 @@ ports:
     onOpen: ignore
   
 tasks:
+  - name: Env Pkgs
+    init: npm install -g newman
   - name: Node Start
     init: npm install
     command: node server.js
