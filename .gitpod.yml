@@ -1,0 +1,15 @@
+github:
+  prebuilds:
+    master: true
+    branches: false
+    pullRequests: true
+    addCheck: true
+    addComment: false
+
+ports:
+  - port: 8080
+  - port: 80
+  
+tasks:
+  - init: npm install
+    command: node server.js
