@@ -19,10 +19,10 @@ ports:
   
 tasks:
   - name: Env Pkgs
-    init: npm install -g newman
+    init: npm install -g newman nodemon
   - name: Node Start
     init: npm install
-    command: node server.js
+    command: nodemon server.js
   - name: Mongo Start
     command: mkdir -p /workspace/data && mongod --dbpath /workspace/data
     openMode: split-right

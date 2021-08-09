@@ -31,7 +31,7 @@ db.mongoose
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to traind." });
+  res.json({ message: "WELCOME" });
 });
 
 require("./app/routes/traind.routes")(app);
